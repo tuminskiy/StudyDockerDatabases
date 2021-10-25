@@ -14,9 +14,7 @@ docker run -d --name "c_neo4j" --env NEO4J_AUTH=neo4j/zx3021 neo4j
 
 printf "\nCreating ElasticSearch 6.5.0 container . . .\n"
 docker rm -f c_elastic || true
-docker network rm elastic_net || true
-docker network create elastic_net
-docker run -d --name "c_elastic" --net elastic_net elasticsearch:6.5.0
+docker run -d --name "c_elastic" elasticsearch:6.5.0
 
 printf "\nCreating PostgreSQL container . . .\n"
 docker rm -f c_psql || true
