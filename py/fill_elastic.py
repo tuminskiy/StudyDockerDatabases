@@ -2,7 +2,7 @@
 
 from elasticsearch import Elasticsearch
 
-HOST = "172.17.0.6"
+HOST = "172.17.0.5"
 INDEX = "tumindb"
 
 es = Elasticsearch(host=HOST)
